@@ -229,8 +229,9 @@
 
 	        if((mutation.addedNodes.length > 0 || mutation.removedNodes > 0) && mutation.target.dataset.uid != undefined){
 
-	          setUIDForElements(mutation.target.querySelector('*'));
-
+	          setUIDForElements(mutation.target.querySelectorAll('*'));
+	          console.log()
+	          console.log(mutation.target.querySelector('*'));
 	          myDataRef.push({
 		          type: 'innerHTML_changed',
 		          uid : mutation.target.dataset.uid,
