@@ -80,7 +80,7 @@
 	        });
 	      }
 
-	    }, 50);
+	    }, 100);
 
 
 	    window.addEventListener('mousemove', function(event){
