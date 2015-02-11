@@ -84,7 +84,7 @@ function selectUser(userid){
 
         if(value.html){
           iframe.loaded = false;
-          iframe.srcdoc = value.html;
+          iframe.srcdoc = value.html.replace('<!-- viewer_base_code -->', '<base href="'+ value.href +'">');
 
 
           setTimeout(function(){
