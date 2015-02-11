@@ -10,7 +10,20 @@
 	  console.log(event);
 	};
 
+  function setUIDForElements(allElements){
+    for(var i = 0; i < allElements.length; i++){
+	    var act = allElements[i];
 
+
+	    if(act.dataset.uid == undefined){
+	      var uid = 'uid-' + getUID();
+	      act.classList.add(uid);
+	      act.dataset.uid = uid;
+
+	    }
+
+	  }
+  }
 
 
 	window.addEventListener('DOMContentLoaded', function(event){
@@ -41,15 +54,7 @@
 	      options.remove();
 	    });
 
-	    var allElements = document.querySelectorAll('*');
-	            for(var i = 0; i < allElements.length; i++){
-	              var act = allElements[i];
-
-		          var uid = 'uid-' + getUID();
-	              act.classList.add(uid);
-	              act.dataset.uid = uid;
-
-	            }
+	    setUIDForElements(document.querySelectorAll('*'));
 
 	    var allNoscripts = document.querySelectorAll('noscript');
       for(var i = 0; i < allNoscripts.length; i++){
@@ -223,6 +228,9 @@
 	        }
 
 	        if((mutation.addedNodes.length > 0 || mutation.removedNodes > 0) && mutation.target.dataset.uid != undefined){
+
+	          setUIDForElements(mutation.target.querySelector('*'));
+
 	          myDataRef.push({
 		          type: 'innerHTML_changed',
 		          uid : mutation.target.dataset.uid,
