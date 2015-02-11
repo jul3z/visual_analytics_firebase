@@ -23,7 +23,7 @@
 	      tapFingerprint = sessionStorage.getItem('tapUid');
 	    }
 
-	    console.info('Fingerprint: ' + tapFingerprint);
+	    console.info('Fingerprint: ' + fingerprint);
 
 
 	    console.info('###########################RELOAD#######################');
