@@ -220,8 +220,14 @@
 		          attr : mutation.attributeName,
 		          attrValue : mutation.target.getAttribute(mutation.attributeName)
 			    });
-	        } else {
-	        	//console.log(mutation);
+	        }
+
+	        if((mutation.addedNodes.length > 0 || mutation.removedNodes > 0) && mutation.target.dataset.uid != undefined){
+	          myDataRef.push({
+		          type: 'innerHTML_changed',
+		          uid : mutation.target.dataset.uid,
+		          html : mutation.target.innerHTML,
+			    });
 	        }
 
 
