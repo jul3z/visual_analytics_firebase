@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="">
+  <head>
+
+    <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+    <script src='viewer.js'></script>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="href">test</div>
+      <div>
+        Users:
+        <select id="user-select"></select>
+      </div>
+
+    </div>
+    <div class="tabs">
+
+    </div>
+    <div class="view">
+      <div class="cursor cursor--dot"></div>
+      <iframe class="view__iframe" sandbox="allow-popups allow-same-origin"></iframe>
+    </div>
+
+    <style>
+      .top-bar {
+        margin-bottom: 10px;
+        display: flex;
+      }
+
+
+
+      .top-bar .href {
+        border: 1px solid gray;
+        padding: 3px;
+      }
+
+      .view {
+        position: relative;
+      }
+
+      body, head {
+        margin: 0;
+        padding: 0;
+      }
+
+      .cursor {
+        position: absolute;
+
+      }
+
+      .cursor--dot {
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        left: -5px;
+        top: -5px;
+        box-shadow: gray 0px 0px 10px;
+        background: gray;
+      }
+
+      .cursor--dot--click {
+        transition: transform .5s ease-in-out;
+      }
+
+      .tabs {
+        display: flex;
+      }
+
+      .tabs > div {
+        border: 1px solid black;
+        padding: 5px;
+      }
+
+    </style>
+  </body>
+</html>
