@@ -50,6 +50,11 @@
 
 	            }
 
+	    var allNoscripts = document.querySelectorAll('noscript');
+      for(var i = 0; i < allNoscripts.length; i++){
+        allNoscripts[i].remove();
+
+      }
 	    window.addEventListener('click', function(event){
 	      //console.log(event);
 	        myDataRef.push({
