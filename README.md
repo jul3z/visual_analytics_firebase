@@ -7,4 +7,4 @@ Visual Mouse Live Tracking with Firebase nad Javascript
 
 
 # Recording Site
-[Open Site](http://weber-juli.github.io/visual_analytics_firebase/)
+[Open Site](http://weber-juli.github.io/visual_analytics_firebase/app/index.html)
