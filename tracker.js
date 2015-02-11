@@ -22,9 +22,10 @@
 	    if(sessionStorage){
 	      tapFingerprint = sessionStorage.getItem('tapUid');
 	    }
+
 	    console.info('Fingerprint: ' + tapFingerprint);
 
-	    console.clear();
+
 	    console.info('###########################RELOAD#######################');
 
 	    var options = new Firebase('https://flickering-fire-4257.firebaseio.com/liveview/' + fingerprint + '/');
