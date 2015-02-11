@@ -19,6 +19,27 @@
 (function () {
   'use strict';
 
+  document.querySelector('.js-button-add-list').addEventListener('click', function(){
+    var li = document.createElement('li');
+    li.innerHTML = document.querySelector('.js-input-add-list').value;
+    document.querySelector('.js-input-add-list').value = '';
+    document.querySelector('.js-list').appendChild(li);
+  });
+
+  document.querySelector('.js-button-add-list-prepend').addEventListener('click', function(){
+    var li = document.createElement('li');
+    li.innerHTML = document.querySelector('.js-input-add-list').value;
+    document.querySelector('.js-input-add-list').value = '';
+    document.querySelector('.js-list').insertBefore(li, document.querySelector('.js-list').childNodes[0]);
+  });
+
+  document.querySelector('.js-button-add-list-middle').addEventListener('click', function(){
+    var li = document.createElement('li');
+    li.innerHTML = document.querySelector('.js-input-add-list').value;
+    document.querySelector('.js-input-add-list').value = '';
+    document.querySelector('.js-list').insertBefore(li, document.querySelector('.js-list').childNodes[2]);
+  });
+
   var querySelector = document.querySelector.bind(document);
 
   var navdrawerContainer = querySelector('.navdrawer-container');

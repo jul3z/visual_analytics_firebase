@@ -147,20 +147,12 @@ function selectUser(userid){
         iframe.contentDocument.querySelector('.' + value.uid).blur();
       } else if(value.type == 'input'){
         iframe.contentDocument.querySelector('.' + value.uid).value = value.value;
+      } else if(value.type == 'innerHTML_changed'){
+        iframe.contentDocument.querySelector('.' + value.uid).innerHTML = value.html;
       }
-
-
 
   }
 
-  myDataRef.once('value', function (snap){
-    var values = snap.val();
 
-
-
-    for(var key in values){
-      displayEvent(values[key], false);
-    }
-  });
   myDataRef.on('child_added', displayEvent);
 }

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="">
   <head>
-    <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+    <script src='https://cdn.firebase.com/js/client/2.1.2/firebase.js'></script>
     <script src="../tracker.js"></script>
     <!-- viewer_base_code -->
     <meta charset="utf-8">
@@ -66,7 +66,12 @@
 
       <br />
       <br />
-      <input type=text placeholder="testeingabe" />
+      <input type=text placeholder="testeingabe" class="js-input-add-list" />
+      <button type=button class="js-button-add-list">append</button>
+      <button type=button class="js-button-add-list-prepend">prepend</button>
+      <button type=button class="js-button-add-list-middle">after second element</button>
+      <ul class="js-list"><li>Entry 1</li><li>Entry 2</li></ul>
+
     </main>
 
     <!-- build:js scripts/main.min.js -->
